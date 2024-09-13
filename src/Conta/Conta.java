@@ -43,10 +43,12 @@ public abstract class Conta implements ModelConta {
 
     public void sacar(double valor){
         this.saldo -= valor;
+        System.out.println("Saque realizado, R$ " + valor);
     }
     
     public void depositar(double valor){
         this.saldo += valor;
+        System.out.println("Deposito realizado, R$ " + valor);
     }
 
     public void transferir(double valor, Conta contaDestino){

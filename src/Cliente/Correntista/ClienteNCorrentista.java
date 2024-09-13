@@ -1,4 +1,6 @@
-package Cliente;
+package Cliente.Correntista;
+
+import Cliente.Cliente;
 
 public class ClienteNCorrentista extends Cliente{
     public ClienteNCorrentista(String titular, int idade, String endereco){

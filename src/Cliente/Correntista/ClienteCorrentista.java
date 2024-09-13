@@ -1,4 +1,6 @@
-package Cliente;
+package Cliente.Correntista;
+
+import Cliente.Cliente;
 
 public class ClienteCorrentista extends Cliente{
     public ClienteCorrentista(String titular, int idade, String endereco){
@@ -7,6 +9,6 @@ public class ClienteCorrentista extends Cliente{
 
     @Override
     public String toString() {
-        return "ClienteCorrentista []";
+        return "Cliente Correntista []";
     }
 }

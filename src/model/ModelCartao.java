@@ -6,7 +6,7 @@ public interface ModelCartao {
     void aumentarLimite(double valorAumentoLimite);
     void bloquearCartao();
     void desbloquearCartao();
-    void recarregarCelular(double valorRecarga);
+    void recarregarCelular(double valorRecarga, int numero);
     void pagarFatura(double valorFatura);
 
 }
