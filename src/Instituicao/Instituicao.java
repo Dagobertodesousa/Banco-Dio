@@ -40,4 +40,22 @@ public abstract class Instituicao implements ModelInstituto{
         this.cartao = cartao;
     }
 
+    @Override
+    public void contaCriada() {
+        // TODO Auto-generated method stub
+        System.out.println("Aberta conta no banco " + this.getClass().getSimpleName());
+    }
+
+    @Override
+    public void fixarMultas() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void fixarTaxas() {
+        // TODO Auto-generated method stub
+        
+    }
+
 }

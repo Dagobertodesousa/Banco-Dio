@@ -3,6 +3,7 @@ package Conta;
 import model.ModelConta;
 
 public abstract class Conta implements ModelConta {
+    private String banco;
     protected String titular;
     protected int agencia;
     protected int conta;
@@ -35,6 +36,7 @@ public abstract class Conta implements ModelConta {
     }
 
     public Conta(String titular,int agencia, int conta) {
+        this.banco = this.getClass().getSimpleName();
         this.titular = titular;
         this.agencia = agencia;
         this.conta = conta;
@@ -60,7 +62,7 @@ public abstract class Conta implements ModelConta {
     }
     
     public String extrato() {
-        return "\n=== Extrato: === "
+        return "\n=== " + banco + " Extrato: === "
                         + "\n--- Titular = " + titular
                         + "\n--- agencia = " + agencia
                         + " ---\n--- conta = " + conta

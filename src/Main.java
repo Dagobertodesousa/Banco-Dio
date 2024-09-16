@@ -23,15 +23,7 @@ public class Main {
 
         contaSalario.depositar(120);
         System.out.println(contaSalario.extrato());
-
-        Cartao cardD = new CartaoDebito(1800.0, 073);
-        cardD.setNumeroCartao(1234, 5678, 9012, 7536);
-        System.out.println("Disponível: R$" + cardD.getDisponivelCartao());
-        System.out.println("Limite: R$" + cardD.getLimiteCartao());
-        System.out.print("Número do Cartão:");
-        cardD.getNumeroCartao().forEach(n -> System.out.print(" "+ n));
-        System.out.println();
-
+        
         Cartao cardC = new CartaoCredito(20000, 007);
         cardC.setNumeroCartao(9876, 5432, 1098, 1563);
         System.out.println("Disponível: R$" + cardC.getDisponivelCartao());
@@ -41,12 +33,44 @@ public class Main {
         System.out.println();
 
         Cliente cli = new ClienteCorrentista("florinda", 32, "rua orquideas");
-        System.out.println(cli.toString());
+
+        Instituicao bradesco = new Bradesco(contaCorrente, cli, cardC);
+        Instituicao Itau = new Itau(contaPoupanca, cli, cardC);
+
+        Cartao cardD = new CartaoDebito(1800.0, 073);
+        cardD.setNumeroCartao(1234, 5678, 9012, 7536);
+        System.out.println("Disponível: R$" + cardD.getDisponivelCartao());
+        System.out.println("Limite: R$" + cardD.getLimiteCartao());
+        System.out.print("Número do Cartão:");
+        cardD.getNumeroCartao().forEach(n -> System.out.print(" "+ n));
+        System.out.println();
+
+        Cartao trashCard = new CartaoCreditoDebito(4000.0, 1200.0, 007);
+        trashCard.setNumeroCartao(9876, 5432, 1098, 1563);
+        System.out.println("Disponível: R$" + trashCard.getDisponivelCartao());
+        System.out.println("Limite: R$" + trashCard.getLimiteCartao());
+        System.out.print("Número do Cartão:");
+        trashCard.getNumeroCartao().forEach(n -> System.out.print(" " + n));
+        System.out.println();
+
 
         poupancas.add(contaPoupanca);
         poupancas.add(contaCorrente);
         poupancas.add(contaSalario);
 
-        Instituicao instituto = new Instituicao(poupancas, cli, cardC);
+        Instituicao Santander = new Santander(contaCorrente, cli, cardD);
+        Instituicao bancoBrasil = new BB(contaSalario, cli, cardC);
+        Instituicao caixaEconomicaFederal = new CEF(contaCorrente, cli, cardD);
+
+        System.out.println(bradesco.getConta().extrato());
+        Itau.getConta().transferir(81.56, Santander.getConta());
+        System.out.println(Santander.getConta().extrato());
+        System.out.println(bancoBrasil.getConta().extrato());
+        System.out.println(caixaEconomicaFederal.getConta().extrato());
+
+        System.out.println(Itau.getConta().getSaldo());
+        System.out.println(Santander.getConta().getSaldo());
+
+
     }
 }
