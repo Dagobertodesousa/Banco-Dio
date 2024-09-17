@@ -1,6 +1,6 @@
 package Instituicao;
 
-import LinhaCredito.Cartao;
+import Cartao.Cartao;
 import Cliente.*;
 import Conta.*;
 
@@ -26,5 +26,6 @@ public class BB extends Instituicao{
     public void fixarTaxas() {
         // TODO Auto-generated method stub
         
-    } 
+    }
+    
 }

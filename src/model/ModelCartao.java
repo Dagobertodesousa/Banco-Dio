@@ -2,7 +2,7 @@ package model;
 
 public interface ModelCartao {
     void contratarInvestimento(double valorInvestimento);
-    void contratarEmprestimo(double valorEmprestimo);
+    void contratarEmprestimo(double valorEmprestimo, int meses);
     void aumentarLimite(double valorAumentoLimite);
     void bloquearCartao();
     void desbloquearCartao();

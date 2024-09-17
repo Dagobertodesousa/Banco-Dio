@@ -1,9 +1,11 @@
-package LinhaCredito;
+package Cartao.LinhaBásico;
 
-public class CartaoCredito extends Cartao{
-    public CartaoCredito(double limiteCartao, int codigoCartao){
+import Cartao.Cartao;
+
+public class CartaoDebito extends Cartao{
+    public CartaoDebito(double disponivelCartao, int codigoCartao){
         super(codigoCartao);
-        this.limiteCartao = limiteCartao;
+        this.disponivelCartao = disponivelCartao;
     }
 
     @Override
@@ -19,9 +21,9 @@ public class CartaoCredito extends Cartao{
     }
 
     @Override
-    public void contratarEmprestimo(double valorEmprestimo) {
+    public void contratarEmprestimo(double valorEmprestimo, int meses) {
         // TODO Auto-generated method stub
-        super.contratarEmprestimo(valorEmprestimo);
+        super.contratarEmprestimo(valorEmprestimo, meses);
     }
 
     @Override
@@ -50,7 +52,7 @@ public class CartaoCredito extends Cartao{
 
     @Override
     public String toString() {
-        return "Cartao de Credito []";
+        return "Cartao de Debito []";
     }
         
 }

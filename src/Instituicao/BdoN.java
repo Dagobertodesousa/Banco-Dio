@@ -4,8 +4,8 @@ import Cartao.Cartao;
 import Cliente.*;
 import Conta.*;
 
-public class Bradesco extends Instituicao{
-    public Bradesco(Conta conta, Cliente cliente, Cartao cartao){
+public class BdoN extends Instituicao{
+    public BdoN(Conta conta, Cliente cliente, Cartao cartao){
         super(conta, cliente, cartao);
         contaCriada();
     }

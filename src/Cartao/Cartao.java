@@ -1,11 +1,11 @@
-package LinhaCredito;
+package Cartao;
 
 import java.util.List;
 import java.util.ArrayList;
 
 import model.ModelCartao;
 
-public class Cartao implements ModelCartao{
+public abstract class Cartao implements ModelCartao{
     protected List<Integer> numeroCartao;
     protected boolean ativoCartao;
     protected double limiteCartao;
@@ -24,11 +24,10 @@ public class Cartao implements ModelCartao{
         return numeroCartao;
     }
 
-    public void setNumeroCartao(int n1, int n2, int n3, int n4) {
-        this.numeroCartao.add(n1);
-        this.numeroCartao.add(n2);
-        this.numeroCartao.add(n3);
-        this.numeroCartao.add(n4);
+    public void setNumeroCartao() {
+        for (int i = 0; i < 4; ++i){
+            this.numeroCartao.add((int) Math.ceil(Math.random()* 9999));
+        }
     }
 
     public boolean isAtivoCartao() {
@@ -72,9 +71,18 @@ public class Cartao implements ModelCartao{
     }
 
     @Override
-    public void contratarEmprestimo(double valorEmprestimo) {
+    public void contratarEmprestimo(double valorEmprestimo, int meses) {
         // TODO Auto-generated method stub
-        
+        double taxa = Math.random()/10;
+        this.disponivelCartao += valorEmprestimo;
+        double emprestimo = valorEmprestimo * Math.pow((1 + taxa*.1), meses);
+        this.limiteCartao -= emprestimo;
+        System.out.println("Valor do empréstimo contratado: R$ "
+                            + valorEmprestimo
+                            + "\nTotal do emprestimo: R$ "
+                            + emprestimo
+                            + "\nValor da taxa aplicada %"
+                            + taxa*10);
     }
 
     @Override

@@ -1,6 +1,6 @@
 package Instituicao;
 
-import LinhaCredito.Cartao;
+import Cartao.Cartao;
 import Cliente.*;
 import Conta.*;
 
