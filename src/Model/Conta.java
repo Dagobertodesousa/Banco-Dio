@@ -1,6 +1,6 @@
-package Conta;
+package Model;
 
-import model.ModelConta;
+import Interface.ModelConta;
 
 public abstract class Conta implements ModelConta {
     private String banco;

@@ -1,5 +1,7 @@
 package Conta;
 
+import Model.Conta;
+
 public class ContaPoupanca extends Conta{
 
     public ContaPoupanca(String titular, int agencia, int conta) {

@@ -1,4 +1,4 @@
-package Cliente;
+package Model;
 
 public abstract class Cliente {
     private String titular;

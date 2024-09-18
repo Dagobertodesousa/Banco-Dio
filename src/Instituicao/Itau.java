@@ -1,12 +1,10 @@
 package Instituicao;
 
-import Cartao.Cartao;
-import Cliente.*;
-import Conta.*;
+import Model.*;
 
 public class Itau extends Instituicao{
-    public Itau(Conta conta, Cliente cliente, Cartao cartao){
-        super(conta, cliente, cartao);
+    public Itau(Cliente cliente, Cartao cartao, Conta conta){
+        super(cliente, cartao, conta);
         contaCriada();
     }
 

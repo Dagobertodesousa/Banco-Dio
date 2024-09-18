@@ -1,12 +1,10 @@
 package Instituicao;
 
-import Cartao.Cartao;
-import Cliente.*;
-import Conta.*;
+import Model.*;
 
-public class BB extends Instituicao{
-    public BB(Conta conta, Cliente cliente, Cartao cartao){
-        super(conta, cliente, cartao);
+public class CaixaEconomicaFederal extends Instituicao{
+    public CaixaEconomicaFederal(Cliente cliente, Cartao cartao, Conta conta){
+        super(cliente, cartao, conta);
         contaCriada();
     }
 
@@ -26,6 +24,5 @@ public class BB extends Instituicao{
     public void fixarTaxas() {
         // TODO Auto-generated method stub
         
-    }
-    
+    } 
 }

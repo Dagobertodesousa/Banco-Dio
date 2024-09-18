@@ -1,12 +1,10 @@
 package Instituicao;
 
-import Cartao.Cartao;
-import Cliente.*;
-import Conta.*;
+import Model.*;
 
-public class BdoN extends Instituicao{
-    public BdoN(Conta conta, Cliente cliente, Cartao cartao){
-        super(conta, cliente, cartao);
+public class BancoDoBrasil extends Instituicao{
+    public BancoDoBrasil(Cliente cliente, Cartao cartao, Conta conta){
+        super(cliente, cartao, conta);
         contaCriada();
     }
 
@@ -26,5 +24,6 @@ public class BdoN extends Instituicao{
     public void fixarTaxas() {
         // TODO Auto-generated method stub
         
-    } 
+    }
+    
 }

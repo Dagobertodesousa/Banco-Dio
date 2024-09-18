@@ -1,6 +1,6 @@
 package Cartao.LinhaBásico;
 
-import Cartao.Cartao;
+import Model.Cartao;
 
 public class CartaoCreditoDebito extends Cartao{
     public CartaoCreditoDebito(double limiteCartao, double disponivelCartao, final int codigoCartao){

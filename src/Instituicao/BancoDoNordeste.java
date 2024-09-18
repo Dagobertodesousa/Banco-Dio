@@ -1,12 +1,10 @@
 package Instituicao;
 
-import Cartao.Cartao;
-import Cliente.*;
-import Conta.*;
+import Model.*;
 
-public class CEF extends Instituicao{
-    public CEF(Conta conta, Cliente cliente, Cartao cartao){
-        super(conta, cliente, cartao);
+public class BancoDoNordeste extends Instituicao{
+    public BancoDoNordeste(Cliente cliente, Cartao cartao, Conta conta){
+        super(cliente, cartao, conta);
         contaCriada();
     }
 

@@ -1,6 +1,6 @@
-package model;
+package Interface;
 
-import Conta.Conta;
+import Model.Conta;
 
 public interface ModelConta {
     void sacar(double valor);

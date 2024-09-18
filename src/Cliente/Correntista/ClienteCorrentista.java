@@ -1,6 +1,6 @@
 package Cliente.Correntista;
 
-import Cliente.Cliente;
+import Model.Cliente;
 
 public class ClienteCorrentista extends Cliente{
     public ClienteCorrentista(String titular, int idade, String endereco){

@@ -1,9 +1,10 @@
-package Cartao;
+package Model;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
-import model.ModelCartao;
+import Interface.ModelCartao;
 
 public abstract class Cartao implements ModelCartao{
     protected List<Integer> numeroCartao;
@@ -26,7 +27,7 @@ public abstract class Cartao implements ModelCartao{
 
     public void setNumeroCartao() {
         for (int i = 0; i < 4; ++i){
-            this.numeroCartao.add((int) Math.ceil(Math.random()* 9999));
+            this.numeroCartao.add(ThreadLocalRandom.current().nextInt(1000, 9999));
         }
     }
 

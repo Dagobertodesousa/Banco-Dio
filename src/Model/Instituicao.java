@@ -1,19 +1,16 @@
-package Instituicao;
+package Model;
 
-import model.ModelInstituto;
-import Cartao.Cartao;
-import Cliente.Cliente;
-import Conta.Conta;
+import Interface.ModelInstituto;
 
 public abstract class Instituicao implements ModelInstituto{
-    private Conta conta;
     private Cliente cliente;
     private Cartao cartao;
+    private Conta conta;
     
-    public Instituicao(Conta conta, Cliente cliente, Cartao cartao) {
-        this.setConta(conta);
+    public Instituicao(Cliente cliente, Cartao cartao, Conta conta) {
         this.setCliente(cliente);
         this.setCartao(cartao);
+        this.setConta(conta);
     }
 
     public Conta getConta() {
@@ -74,5 +71,4 @@ public abstract class Instituicao implements ModelInstituto{
                 + "\nDisponível para bédito: " + getCartao().getDisponivelCartao()
                 + "\nLimite de crédito: " + getCartao().getLimiteCartao();
     }
-
 }
